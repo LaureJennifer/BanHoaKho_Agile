@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            btnKhach = new Button();
+            btnAdmin = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // btnKhach
             // 
-            button1.Location = new Point(132, 168);
-            button1.Name = "button1";
-            button1.Size = new Size(225, 74);
-            button1.TabIndex = 0;
-            button1.Text = "KHÁCH";
-            button1.UseVisualStyleBackColor = true;
+            btnKhach.Location = new Point(131, 168);
+            btnKhach.Name = "btnKhach";
+            btnKhach.Size = new Size(225, 74);
+            btnKhach.TabIndex = 0;
+            btnKhach.Text = "KHÁCH";
+            btnKhach.UseVisualStyleBackColor = true;
+            btnKhach.Click += btnKhach_Click_1;
             // 
-            // button2
+            // btnAdmin
             // 
-            button2.Location = new Point(432, 168);
-            button2.Name = "button2";
-            button2.Size = new Size(225, 74);
-            button2.TabIndex = 1;
-            button2.Text = "ADMIN";
-            button2.UseVisualStyleBackColor = true;
+            btnAdmin.Location = new Point(432, 168);
+            btnAdmin.Name = "btnAdmin";
+            btnAdmin.Size = new Size(225, 74);
+            btnAdmin.TabIndex = 1;
+            btnAdmin.Text = "ADMIN";
+            btnAdmin.UseVisualStyleBackColor = true;
+            btnAdmin.Click += btnAdmin_Click;
             // 
             // label1
             // 
@@ -66,8 +68,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnAdmin);
+            Controls.Add(btnKhach);
             Name = "Form2";
             Text = "Form2";
             Load += Form2_Load;
@@ -77,8 +79,8 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button btnKhach;
+        private Button btnAdmin;
         private Label label1;
     }
 }

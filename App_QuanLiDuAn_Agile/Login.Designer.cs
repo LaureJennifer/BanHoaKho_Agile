@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            UserNameTxt = new TextBox();
+            PassWordTxt = new TextBox();
             label2 = new Label();
-            button1 = new Button();
+            btnLogin = new Button();
             linkLabel1 = new LinkLabel();
             SuspendLayout();
             // 
@@ -40,71 +40,77 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(24, 26);
+            label1.Location = new Point(27, 35);
             label1.Name = "label1";
-            label1.Size = new Size(98, 30);
+            label1.Size = new Size(126, 37);
             label1.TabIndex = 0;
             label1.Text = "Account ";
             // 
-            // textBox1
+            // UserNameTxt
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(141, 21);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(325, 35);
-            textBox1.TabIndex = 1;
+            UserNameTxt.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            UserNameTxt.Location = new Point(161, 28);
+            UserNameTxt.Margin = new Padding(3, 4, 3, 4);
+            UserNameTxt.Name = "UserNameTxt";
+            UserNameTxt.Size = new Size(371, 42);
+            UserNameTxt.TabIndex = 1;
             // 
-            // textBox2
+            // PassWordTxt
             // 
-            textBox2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(141, 94);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(325, 35);
-            textBox2.TabIndex = 3;
+            PassWordTxt.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            PassWordTxt.Location = new Point(161, 125);
+            PassWordTxt.Margin = new Padding(3, 4, 3, 4);
+            PassWordTxt.Name = "PassWordTxt";
+            PassWordTxt.Size = new Size(371, 42);
+            PassWordTxt.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(19, 97);
+            label2.Location = new Point(22, 129);
             label2.Name = "label2";
-            label2.Size = new Size(103, 30);
+            label2.Size = new Size(132, 37);
             label2.TabIndex = 2;
             label2.Text = "Password";
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(170, 161);
-            button1.Name = "button1";
-            button1.Size = new Size(116, 41);
-            button1.TabIndex = 4;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
+            btnLogin.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.Location = new Point(194, 215);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(133, 55);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(182, 143);
+            linkLabel1.Location = new Point(208, 191);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(95, 15);
+            linkLabel1.Size = new Size(120, 20);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot password";
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(492, 214);
+            ClientSize = new Size(562, 285);
             Controls.Add(linkLabel1);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
+            Controls.Add(btnLogin);
+            Controls.Add(PassWordTxt);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(UserNameTxt);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -112,10 +118,10 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox UserNameTxt;
+        private TextBox PassWordTxt;
         private Label label2;
-        private Button button1;
+        private Button btnLogin;
         private LinkLabel linkLabel1;
     }
 }
