@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GIGABYTE\\Desktop\\banhoakho\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {}
+    "C:\\Users\\ADMIN\\Downloads\\BanHoaKho-main\\BanHoaKho-main\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GIGABYTE\\Desktop\\banhoakho\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {
+    "C:\\Users\\ADMIN\\Downloads\\BanHoaKho-main\\BanHoaKho-main\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GIGABYTE\\Desktop\\banhoakho\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\BanHoaKho-main\\BanHoaKho-main\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
         "projectName": "App_QuanLiDuAn_Agile",
-        "projectPath": "C:\\Users\\GIGABYTE\\Desktop\\banhoakho\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
-        "packagesPath": "C:\\Users\\GIGABYTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GIGABYTE\\Desktop\\banhoakho\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Downloads\\BanHoaKho-main\\BanHoaKho-main\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Downloads\\BanHoaKho-main\\BanHoaKho-main\\App_QuanLiDuAn_Agile\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\GIGABYTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +43,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

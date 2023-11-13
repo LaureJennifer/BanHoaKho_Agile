@@ -48,7 +48,7 @@
             button6 = new Button();
             groupBox3 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            dataGridView1 = new DataGridView();
+            dvg = new DataGridView();
             STT = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -57,7 +57,7 @@
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dvg).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -259,7 +259,7 @@
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(dataGridView1, 0, 0);
+            tableLayoutPanel1.Controls.Add(dvg, 0, 0);
             tableLayoutPanel1.Location = new Point(7, 29);
             tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -268,18 +268,19 @@
             tableLayoutPanel1.Size = new Size(803, 200);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dvg
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { STT, Column1, Column2, Column3 });
-            dataGridView1.Location = new Point(3, 4);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(797, 192);
-            dataGridView1.TabIndex = 0;
+            dvg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dvg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvg.Columns.AddRange(new DataGridViewColumn[] { STT, Column1, Column2, Column3 });
+            dvg.Location = new Point(3, 4);
+            dvg.Margin = new Padding(3, 4, 3, 4);
+            dvg.Name = "dvg";
+            dvg.RowHeadersWidth = 51;
+            dvg.RowTemplate.Height = 25;
+            dvg.Size = new Size(797, 192);
+            dvg.TabIndex = 0;
+            dvg.CellContentClick += dvg_CellContentClick;
             // 
             // STT
             // 
@@ -329,7 +330,7 @@
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dvg).EndInit();
             ResumeLayout(false);
         }
 
@@ -355,7 +356,7 @@
         private ComboBox comboBox1;
         private GroupBox groupBox3;
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridView1;
+        private DataGridView dvg;
         private DataGridViewTextBoxColumn STT;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
