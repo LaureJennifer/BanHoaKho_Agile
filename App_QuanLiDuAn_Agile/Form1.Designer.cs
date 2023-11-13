@@ -37,15 +37,15 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            QuantityTxt = new TextBox();
+            PriceTxt = new TextBox();
+            NameTxt = new TextBox();
+            IdTxt = new TextBox();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
-            button6 = new Button();
+            ResetFormBtn = new Button();
             groupBox3 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             dvg = new DataGridView();
@@ -108,10 +108,10 @@
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(QuantityTxt);
+            groupBox2.Controls.Add(PriceTxt);
+            groupBox2.Controls.Add(NameTxt);
+            groupBox2.Controls.Add(IdTxt);
             groupBox2.Location = new Point(14, 171);
             groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
@@ -161,37 +161,37 @@
             label1.TabIndex = 3;
             label1.Text = "ID";
             // 
-            // textBox5
+            // QuantityTxt
             // 
-            textBox5.Location = new Point(146, 260);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(451, 27);
-            textBox5.TabIndex = 2;
+            QuantityTxt.Location = new Point(146, 260);
+            QuantityTxt.Margin = new Padding(3, 4, 3, 4);
+            QuantityTxt.Name = "QuantityTxt";
+            QuantityTxt.Size = new Size(451, 27);
+            QuantityTxt.TabIndex = 2;
             // 
-            // textBox4
+            // PriceTxt
             // 
-            textBox4.Location = new Point(146, 188);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(451, 27);
-            textBox4.TabIndex = 1;
+            PriceTxt.Location = new Point(146, 188);
+            PriceTxt.Margin = new Padding(3, 4, 3, 4);
+            PriceTxt.Name = "PriceTxt";
+            PriceTxt.Size = new Size(451, 27);
+            PriceTxt.TabIndex = 1;
             // 
-            // textBox3
+            // NameTxt
             // 
-            textBox3.Location = new Point(146, 124);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(451, 27);
-            textBox3.TabIndex = 0;
+            NameTxt.Location = new Point(146, 124);
+            NameTxt.Margin = new Padding(3, 4, 3, 4);
+            NameTxt.Name = "NameTxt";
+            NameTxt.Size = new Size(451, 27);
+            NameTxt.TabIndex = 0;
             // 
-            // textBox2
+            // IdTxt
             // 
-            textBox2.Location = new Point(146, 64);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(451, 27);
-            textBox2.TabIndex = 0;
+            IdTxt.Location = new Point(146, 64);
+            IdTxt.Margin = new Padding(3, 4, 3, 4);
+            IdTxt.Name = "IdTxt";
+            IdTxt.Size = new Size(451, 27);
+            IdTxt.TabIndex = 0;
             // 
             // button2
             // 
@@ -234,15 +234,16 @@
             button5.Text = "Hiển thị ";
             button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // ResetFormBtn
             // 
-            button6.Location = new Point(648, 480);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(176, 40);
-            button6.TabIndex = 6;
-            button6.Text = "Reset ";
-            button6.UseVisualStyleBackColor = true;
+            ResetFormBtn.Location = new Point(648, 480);
+            ResetFormBtn.Margin = new Padding(3, 4, 3, 4);
+            ResetFormBtn.Name = "ResetFormBtn";
+            ResetFormBtn.Size = new Size(176, 40);
+            ResetFormBtn.TabIndex = 6;
+            ResetFormBtn.Text = "Reset ";
+            ResetFormBtn.UseVisualStyleBackColor = true;
+            ResetFormBtn.Click += ResetFormBtn_Click;
             // 
             // groupBox3
             // 
@@ -314,7 +315,7 @@
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(867, 784);
             Controls.Add(groupBox3);
-            Controls.Add(button6);
+            Controls.Add(ResetFormBtn);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -345,12 +346,12 @@
         private Button button3;
         private Button button4;
         private Button button5;
-        private Button button6;
+        private Button ResetFormBtn;
         private Label label1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox QuantityTxt;
+        private TextBox PriceTxt;
+        private TextBox NameTxt;
+        private TextBox IdTxt;
         private Label label4;
         private Label label3;
         private Label label2;

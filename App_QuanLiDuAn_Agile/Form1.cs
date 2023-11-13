@@ -50,6 +50,14 @@ namespace App_QuanLiDuAn_Agile
         {
 
         }
+
+        private void ResetFormBtn_Click(object sender, EventArgs e)
+        {
+            IdTxt.Clear();
+            NameTxt.Clear();
+            PriceTxt.Clear();
+            QuantityTxt.Clear();
+        }
     }
 }
 
