@@ -43,7 +43,7 @@
             IdTxt = new TextBox();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
+            DeleteBtn = new Button();
             button5 = new Button();
             ResetFormBtn = new Button();
             groupBox3 = new GroupBox();
@@ -214,15 +214,16 @@
             button3.Text = "Sửa";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // DeleteBtn
             // 
-            button4.Location = new Point(648, 337);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(176, 40);
-            button4.TabIndex = 4;
-            button4.Text = "Xóa ";
-            button4.UseVisualStyleBackColor = true;
+            DeleteBtn.Location = new Point(648, 337);
+            DeleteBtn.Margin = new Padding(3, 4, 3, 4);
+            DeleteBtn.Name = "DeleteBtn";
+            DeleteBtn.Size = new Size(176, 40);
+            DeleteBtn.TabIndex = 4;
+            DeleteBtn.Text = "Xóa ";
+            DeleteBtn.UseVisualStyleBackColor = true;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // button5
             // 
@@ -317,7 +318,7 @@
             Controls.Add(groupBox3);
             Controls.Add(ResetFormBtn);
             Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(DeleteBtn);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(groupBox2);
@@ -344,7 +345,7 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button4;
+        private Button DeleteBtn;
         private Button button5;
         private Button ResetFormBtn;
         private Label label1;

@@ -58,6 +58,11 @@ namespace App_QuanLiDuAn_Agile
             PriceTxt.Clear();
             QuantityTxt.Clear();
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            //xóa
+        }
     }
 }
 
