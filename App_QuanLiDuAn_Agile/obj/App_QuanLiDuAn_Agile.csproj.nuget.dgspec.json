@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GIGABYTE\\Source\\Repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {}
+    "C:\\Users\\GIGABYTE\\source\\repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GIGABYTE\\Source\\Repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {
+    "C:\\Users\\GIGABYTE\\source\\repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GIGABYTE\\Source\\Repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
+        "projectUniqueName": "C:\\Users\\GIGABYTE\\source\\repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
         "projectName": "App_QuanLiDuAn_Agile",
-        "projectPath": "C:\\Users\\GIGABYTE\\Source\\Repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
+        "projectPath": "C:\\Users\\GIGABYTE\\source\\repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\App_QuanLiDuAn_Agile.csproj",
         "packagesPath": "C:\\Users\\GIGABYTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GIGABYTE\\Source\\Repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\obj\\",
+        "outputPath": "C:\\Users\\GIGABYTE\\source\\repos\\BanHoaKho_Agile\\App_QuanLiDuAn_Agile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GIGABYTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Microsoft.Data.SqlClient": {
+            "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.1.2, )"
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
@@ -64,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
