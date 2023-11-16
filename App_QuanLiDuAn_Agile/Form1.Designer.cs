@@ -49,10 +49,7 @@
             groupBox3 = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             dvg = new DataGridView();
-            STT = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
+            SortByPriceBtn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -195,7 +192,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(648, 187);
+            button2.Location = new Point(648, 171);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(176, 40);
@@ -206,7 +203,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(648, 264);
+            button3.Location = new Point(648, 228);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(176, 40);
@@ -216,7 +213,7 @@
             // 
             // DeleteBtn
             // 
-            DeleteBtn.Location = new Point(648, 337);
+            DeleteBtn.Location = new Point(648, 288);
             DeleteBtn.Margin = new Padding(3, 4, 3, 4);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(176, 40);
@@ -227,7 +224,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(648, 409);
+            button5.Location = new Point(648, 346);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(176, 40);
@@ -275,7 +272,6 @@
             // 
             dvg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvg.Columns.AddRange(new DataGridViewColumn[] { STT, Column1, Column2, Column3 });
             dvg.Location = new Point(3, 4);
             dvg.Margin = new Padding(3, 4, 3, 4);
             dvg.Name = "dvg";
@@ -283,31 +279,17 @@
             dvg.RowTemplate.Height = 25;
             dvg.Size = new Size(797, 192);
             dvg.TabIndex = 0;
-            dvg.CellContentClick += dvg_CellContentClick;
             // 
-            // STT
+            // SortByPriceBtn
             // 
-            STT.HeaderText = "STT";
-            STT.MinimumWidth = 6;
-            STT.Name = "STT";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Tên sản phẩm ";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Giá nhập";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Lượng nhập";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
+            SortByPriceBtn.Location = new Point(648, 407);
+            SortByPriceBtn.Margin = new Padding(3, 4, 3, 4);
+            SortByPriceBtn.Name = "SortByPriceBtn";
+            SortByPriceBtn.Size = new Size(176, 40);
+            SortByPriceBtn.TabIndex = 8;
+            SortByPriceBtn.Text = "Sắp xếp";
+            SortByPriceBtn.UseVisualStyleBackColor = true;
+            SortByPriceBtn.Click += SortByPriceBtn_Click;
             // 
             // Form1
             // 
@@ -315,6 +297,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(867, 784);
+            Controls.Add(SortByPriceBtn);
             Controls.Add(groupBox3);
             Controls.Add(ResetFormBtn);
             Controls.Add(button5);
@@ -360,9 +343,6 @@
         private GroupBox groupBox3;
         private TableLayoutPanel tableLayoutPanel1;
         private DataGridView dvg;
-        private DataGridViewTextBoxColumn STT;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
+        private Button SortByPriceBtn;
     }
 }

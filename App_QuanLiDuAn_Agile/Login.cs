@@ -1,4 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿
 
 namespace App_QuanLiDuAn_Agile
 {
@@ -18,7 +18,7 @@ namespace App_QuanLiDuAn_Agile
                 check = false;
                 MessageBox.Show("Chua nhap du lieu!", "Thong bao!");
             }
-            else if (checkLogin==true)
+            else if (checkLogin == true)
             {
                 if (!UserNameTxt.Text.Contains("@admin"))
                 {
@@ -26,20 +26,20 @@ namespace App_QuanLiDuAn_Agile
                     MessageBox.Show("Chua nhap dung du lieu!", "Thong bao!");
                 }
                 else check = true;
-            }         
+            }
             else
-               if (checkLogin ==false)
+               if (checkLogin == false)
+            {
+                if (!UserNameTxt.Text.Contains("@admin"))
                 {
-                    if (!UserNameTxt.Text.Contains("@admin"))
-                    {
-                        check  = true; 
-                    }
-                    else
-                    {
-                        check = false;
-                        MessageBox.Show("Chua nhap dung du lieu!", "Thong bao!");
-                    }
+                    check = true;
                 }
+                else
+                {
+                    check = false;
+                    MessageBox.Show("Chua nhap dung du lieu!", "Thong bao!");
+                }
+            }
                 
             
             return check;

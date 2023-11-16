@@ -7,27 +7,35 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Data;
-using Microsoft.Data.SqlClient;
+using System.Data.SqlTypes;
 
 namespace App_QuanLiDuAn_Agile
 {
 
     public partial class Form1 : Form
     {
-
-        //SqlConnection connection;
-        //SqlCommand command;
-        //string str = "Data Source=PHẠM-TIẾN-DŨNG;Initial Catalog=QLBH;Integrated Security=True;Encrypt=False";
-        //SqlDataAdapter adapter = new SqlDataAdapter();
-        //DataTable table = new DataTable();
+        List<SanPham> _lstSP=new();
+        private SqlConnection _connection;
         void loaddata()
         {
-            //command = connection.CreateCommand();
-            //command.CommandText = " select * from SANPHAM";
-            //adapter.SelectCommand = command;
-            //table.Clear();
-            //adapter.Fill(table);
-            //dvg.DataSource = table;
+            _connection.Open();
+            String query = "select * from SANPHAM";
+            SqlCommand cmd = new SqlCommand(query, _connection);
+            DataTable tableData = new DataTable();
+            tableData.Load(cmd.ExecuteReader());
+            //dvg.DataSource = tableData;
+            foreach (DataRow row in tableData.Rows)
+            {
+                SanPham sanPham = new SanPham()
+                {
+                    idSP = (string)row["IDSanPham"],
+                    nameSP = (string)row["TEN"],
+                    Gia = (decimal)row["GIANHAP"],
+                    Soluong = (int)row["SLNHAP"]
+                };
+                _lstSP.Add(sanPham);
+            }
+            dvg.DataSource = _lstSP;
         }
         public Form1()
         {
@@ -36,15 +44,12 @@ namespace App_QuanLiDuAn_Agile
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //connection = new SqlConnection(str);
-            //connection.Open();
-            //loaddata();
+            string path = @"Data Source=trang;Initial Catalog=QLBH_agile;Integrated Security=True";
+            _connection = new SqlConnection(path);
+            loaddata();
         }
 
-        private void dvg_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -62,6 +67,14 @@ namespace App_QuanLiDuAn_Agile
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             //xóa
+        }
+
+        private void SortByPriceBtn_Click(object sender, EventArgs e)
+        {
+
+            var lstSpOrderByPrice=_lstSP.OrderByDescending(x => x.Gia).ToList();
+            dvg.DataSource = lstSpOrderByPrice;
+            
         }
     }
 }
