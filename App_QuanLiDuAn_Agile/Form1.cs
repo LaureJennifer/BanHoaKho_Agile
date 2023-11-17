@@ -24,19 +24,23 @@ namespace App_QuanLiDuAn_Agile
             SqlCommand cmd = new SqlCommand(query, _connection);
             DataTable tableData = new DataTable();
             tableData.Load(cmd.ExecuteReader());
-            //dvg.DataSource = tableData;
-            foreach (DataRow row in tableData.Rows)
-            {
-                SanPham sanPham = new SanPham()
-                {
-                    idSP = (string)row["IDSanPham"],
-                    nameSP = (string)row["TEN"],
-                    Gia = (decimal)row["GIANHAP"],
-                    Soluong = (int)row["SLNHAP"]
-                };
-                _lstSP.Add(sanPham);
-            }
-            lstDgrid.DataSource = _lstSP;
+            lstDgrid.DataSource = tableData;
+            lstDgrid.Columns[0].HeaderText = "Mã sản phẩm";
+            lstDgrid.Columns[1].HeaderText = "Tên sản phẩm";
+            lstDgrid.Columns[2].HeaderText = "Giá nhập";
+            lstDgrid.Columns[3].HeaderText = "Số l";
+            //foreach (DataRow row in tableData.Rows)
+            //{
+            //    SanPham sanPham = new SanPham()
+            //    {
+            //        idSP = (string)row["IDSanPham"],
+            //        nameSP = (string)row["TEN"],
+            //        Gia = (decimal)row["GIANHAP"],
+            //        Soluong = (int)row["SLNHAP"]
+            //    };
+            //    _lstSP.Add(sanPham);
+            //}
+            //lstDgrid.DataSource = _lstSP;
             _connection.Close();
         }
         public Form1()
@@ -84,12 +88,12 @@ namespace App_QuanLiDuAn_Agile
                 SqlConnection SqlConnection = new SqlConnection("Data Source=trang;Initial Catalog=QLBH_agile;Integrated Security=True");
                 SqlConnection.Open();
                 var query = $"Insert into SANPHAM (IDSanPham, TEN , GIANHAP , SLNHAP)" +
-                    $"VALUES ('{IdTxt.Text}','{NameTxt.Text}','{PriceTxt.Text}','{QuantityTxt.Text}')";
+                    $"VALUES ('{IdTxt.Text}','{NameTxt.Text}',Cast({PriceTxt.Text} as varchar),{QuantityTxt.Text})";
                 SqlCommand command = new SqlCommand(query, SqlConnection);
                 command.ExecuteNonQuery();
 
                 SqlConnection.Close();
-                
+                loaddata();
             }
             
         }
@@ -107,12 +111,14 @@ namespace App_QuanLiDuAn_Agile
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+
+            _connection = new SqlConnection("Data Source=trang;Initial Catalog=QLBH_agile;Integrated Security=True");
             _connection.Open();
             var query = $"UPDATE SANPHAM SET TEN = '{NameTxt.Text}', GIANHAP = '{PriceTxt.Text}', SLNHAP = '{QuantityTxt.Text}' WHERE IDSanPham = '{IdTxt.Text}'";
             SqlCommand cmd = new SqlCommand(query, _connection);
             cmd.ExecuteNonQuery();
-
             _connection.Close();
+            loaddata();
         }
 
         private void HienthiBtn_Click(object sender, EventArgs e)
@@ -133,7 +139,7 @@ namespace App_QuanLiDuAn_Agile
             PriceTxt.Text = lstDgrid.Rows[d].Cells[2].Value.ToString();
             QuantityTxt.Text = lstDgrid.Rows[d].Cells[3].Value.ToString();
         }
+       
     }
 }
 
-//"F:\học tập\Xưởng\App_QuanLiDuAn_Agile"
